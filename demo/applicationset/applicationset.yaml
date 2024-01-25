@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/AmrAlaaYassen/ArgoCD-ApplicationSet-Demo.git
+        repoURL: https://github.com/it2008018/appsetsDemo.git
         revision: HEAD
         directories:
           # here it will read the paths under configs and the subpaths under the config paths
@@ -25,7 +25,7 @@ spec:
             - "configs/{{path[2]}}/{{path.basename}}/values.yaml"
             - "configs/{{path[2]}}/values.yaml"
         path: demo
-        repoURL: https://github.com/AmrAlaaYassen/ArgoCD-ApplicationSet-Demo.git
+        repoURL: https://github.com/it2008018/appsetsDemo.git
         targetRevision: HEAD
       syncPolicy:
         automated:
@@ -33,4 +33,4 @@ spec:
       destination:
         # specify different destinations
         namespace: "{{path.basename}}"
-        server: https://kubernetes.default.svc
+        server: https://kubernetes.default.svc  
