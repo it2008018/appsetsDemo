@@ -23,6 +23,6 @@ spec:
         path: list-generator-example/deployment
       destination:
         # default cluster as destination, you can define multiple clusters in ArgoCD UI
-        server: https://kubernetes.default.svc
+        server: http://cluster-zuscu-d006-b207-aks-d1-atldp:8001
         # will deploy to different namespaces as different destinations 
         namespace: '{{namespace}}'
